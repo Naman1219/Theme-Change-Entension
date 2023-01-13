@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<style>
+body{
+  min-width: 300px;
+  text-align: center;
+}
+
+h1{
+  font-family: 'Open Sans', sans-serif;
+}
+.yellow{
+  color: #fbe36d;
+}
+.blue{
+  color: #588be4;
+}
+
+p, .button{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.button{
+  background-color: #8abff0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  height: 2rem;
+  width: 4.5rem;
+  border-radius: 1rem;
+  /* animation: backgroundYellow 3s infinite; */
+  cursor: pointer;
+}
+
+.row{
+  padding: 0 0.25rem;
+  pointer-events: none;
+}
+
+.circle{
+  position:absolute;
+  top:0;
+  left:0;
+  height:2rem;
+  width:2rem;
+  border-radius:50%;
+  background-color:#588BE4;
+  /* animation: moveCircleRight 3s infinite; */
+  pointer-events: none;
+}
+
+/* animations: */
+
+@keyframes moveCircleRight{
+  from {
+    left:0;
+    background-color:#588BE4;
+  }
+  to {
+    left:100%;
+    transform: translateX(-100%);
+    background-color:#fbe36d;
+  }
+}
+
+@keyframes moveCircleLeft{
+  from {
+    left:100%;
+    transform: translateX(-100%);
+    background-color:#fbe36d;
+  }
+  to {
+    left:0;
+    background-color:#588BE4;    
+  }
+}
+
+@keyframes backgroundYellow{
+  from{
+    background-color: #8abff0;
+  }
+  
+  to{
+    background-color: #FDFCA3;
+  }
+}
+
+@keyframes backgroundBlue{
+  from{
+    background-color: #FDFCA3;
+  }
+  
+  to{
+    background-color: #8abff0;
+  }
+}
+
+
+</style>
+
+<body class="popup">
+  <h1><span class="yellow">Theme </span><span class="blue">Change</span></h1>
+  <p>Bored of looking at websites the same way? Use theme-change, a chrome extension that can change your website from dark to light mode and vice-versa!</p>
+  <div class="button">
+    <div class="row">On</div>
+    <div class="row">Off</div>
+    <div class="circle"></div>
+  </div>
+</body>
+
+<script src="./popup.js" ></script>
+
+</html>
