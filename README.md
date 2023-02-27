@@ -1,4 +1,4 @@
-# Theme-Change-Entension
+# Theme-Change-Extension
 Change the theme of your current webpage into Dark or Light Mode.
 
 
